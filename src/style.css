@@ -1,0 +1,237 @@
+.gridContainer {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gridHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 30px;
+}
+
+.searchZone {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  height: 100%;
+  align-items: center;
+}
+
+.searchZone * {
+  height: 100%;
+  align-content: center;
+}
+
+.searchZone input {
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.searchZone.disabled {
+  display: none;
+}
+
+.PageSizeSelector {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.PageSizeSelector,
+.PageSizeSelector * {
+  height: 100%;
+  align-content: center;
+}
+
+.custom-select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.select-selected {
+  padding: 5px;
+}
+
+.select-selected,
+.select-items {
+  min-width: 70px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: black transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent black transparent;
+  top: 7px;
+}
+
+.select-arrow-active {
+  border: 3px solid black !important;
+}
+
+.select-items {
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-items div {
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.select-items div:hover {
+  background-color: rgb(147, 147, 147);
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-disabled {
+  color: #00000061;
+}
+
+.select-items div.select-disabled:hover {
+  background-color: transparent;
+  cursor: default;
+}
+
+.gridMain-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.gridMain-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.gridMain-table th,
+.gridMain-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.gridMain-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #333;
+  font-size: 15px;
+  position: relative;
+  cursor: default;
+  text-align: left;
+  vertical-align: middle;
+  min-width: 50px;
+}
+
+.th-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.gridMain-table td {
+  font-size: 14px;
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gridControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gridControls-infos p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.gridControls-btns {
+  display: flex;
+  align-items: center;
+}
+
+.gridControls-btns button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.gridControls-btns button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.gridControls-btns button:not(:disabled):hover {
+  background-color: #0056b3;
+}
+
+.gridControls-btns p {
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.btnSort {
+  position: absolute;
+  content: "";
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+}
+
+.btnSort.notSort {
+  border-color: transparent transparent transparent transparent;
+}
+
+.btnSort.asc {
+  top: 26px;
+  border-color: white transparent transparent transparent;
+}
+
+.btnSort.desc {
+  top: 20px;
+  border-color: transparent transparent white transparent;
+}
+
+.emptyList {
+  padding: 50px 50px 20px 50px;
+  text-align-last: center;
+}
